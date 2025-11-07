@@ -453,6 +453,13 @@
             background: var(--primary-dark);
         }
 
+        .custume-bg {
+          background-image: url('./assets/banner.png');
+          background-position: right;
+          background-repeat: no-repeat;
+          background-size: cover;
+        }
+
         /* Interactive Elements */
         .interactive-element {
             background: var(--light);
@@ -873,7 +880,7 @@
 
             <div class="reader-content" id="readerContent">
                 <!-- Top Ad -->
-                <div class="ad-container">
+                <!-- <div class="ad-container">
                     <div class="ad-content">
                         <div class="ad-image">
                             Your Ad Here
@@ -882,7 +889,7 @@
                         <div class="ad-description">Explore our collection of steamy romance stories with exclusive content</div>
                         <button class="ad-button">Browse Now</button>
                     </div>
-                </div>
+                </div> -->
                 
                 <div class="chapter-text" id="chapterText">
                     <!-- Chapter content will be populated by JavaScript -->
@@ -917,11 +924,11 @@
                 </div>
                 
                 <!-- Middle Ad -->
-                <div class="ad-container">
+                <div class="ad-container custume-bg">
                     <div class="ad-content">
-                        <div class="ad-title">Join Our Reading Community</div>
+                        <div class="ad-title">If You Have More Than 18y... You're Ready for What Happens Next</div>
                         <div class="ad-description">Get access to exclusive content, early chapters, and connect with other readers</div>
-                        <button class="ad-button">Join Free</button>
+                        <button class="ad-button" onclick="redirect()">Join to community</button>
                     </div>
                 </div>
             </div>
@@ -1077,6 +1084,10 @@
                 }
             ]
         };
+
+        function redirect() {
+          window.location.href = "./pages/premium.html";
+        }
 
         // App State
         let currentState = {
